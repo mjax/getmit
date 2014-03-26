@@ -17,14 +17,19 @@ def read_mit():
 
 mit = read_mit()
 
-def get_mit():
+def write_mit():
     os.system('touch DEMO.txt')
     with open('DEMO.txt', 'w') as f:
-        make_mit = f.write(mit)
-    return 'ok'
+        make_mit = f.write(mit.format(DATE, FULLNAME))
+    return '*ok'
+
+def make_mit():
+    mit = read_mit()
+    return mit.format(DATE, FULLNAME)
 
 def main():
-    get_mit()
+    print make_mit()
+    write_mit()
 
 if __name__ == '__main__':
     main()
