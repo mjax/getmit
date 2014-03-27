@@ -26,10 +26,3 @@ def write_mit():
 def make_mit():
     mit = read_mit()
     return mit.format(DATE, FULLNAME)
-
-def main():
-    print make_mit()
-    write_mit()
-
-if __name__ == '__main__':
-    main()
