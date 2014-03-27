@@ -26,3 +26,13 @@ def write_mit():
 def make_mit():
     mit = read_mit()
     return mit.format(DATE, FULLNAME)
+
+def required():
+    return 'License and copyright notice'
+
+def permitted():
+    perm = {1: 'Commercial Use', 2: 'Distribution', 3: 'Modification', 4: 'Private Use', 5: 'Sublicensing'}
+    return perm
+
+def forbidden():
+    return 'Hold Liable'
