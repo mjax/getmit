@@ -1,5 +1,8 @@
 A tiny command line application to create an MIT LICENSE file with your credentials.
 
+
+You can: **pip install getmit**
+
 ```
 >>> getmit
 
@@ -25,4 +28,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
-
