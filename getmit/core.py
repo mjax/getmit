@@ -43,4 +43,4 @@ def return_mit():
     os.path.join(current_path, 'LICENSE')
     with open('LICENSE', 'w') as f:
         f.write(text)
-    return colored.blue('FILE CREATION COMPLETE')
+    return colored.blue('GETMIT --FILE CREATION COMPLETE')
