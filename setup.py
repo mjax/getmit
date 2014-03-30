@@ -10,7 +10,7 @@ except ImportError:
 
 setup(
     name='getmit',
-    version='0.0.1',
+    version='0.0.2',
     description='CLI for making MIT license',
     url='https://github.com/edgarasg/getmit',
     author='Edgar Gavrik',
@@ -20,6 +20,6 @@ setup(
     entry_points={
         'console_scripts': [
             'getmit = getmit.core:return_mit'
-            ]
-        }
-    )
+        ]
+    }
+)

@@ -8,7 +8,7 @@ __title__ = 'getmit'
 __author__ = 'Edgar Gavrik'
 __license__ = 'MIT'
 
-FULLNAME = 'Edgar Gavrik'
+FULLNAME = '<YOURNAME>'
 DATE = datetime.date.today().year
 
 def mit_text():
