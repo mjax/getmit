@@ -2,6 +2,7 @@
 
 import os
 import datetime
+from clint.textui import colored
 
 __title__ = 'getmit'
 __author__ = 'Edgar Gavrik'
@@ -10,30 +11,36 @@ __license__ = 'MIT'
 FULLNAME = 'Edgar Gavrik'
 DATE = datetime.date.today().year
 
-def read_mit():
-    with open('MIT.txt', 'r') as f:
-        mit = f.read()
-    return mit
+def mit_text():
+    return '''
+The MIT License (MIT)
 
-mit = read_mit()
+Copyright (c) {0} {1}
 
-def write_mit():
-    os.system('touch DEMO.txt')
-    with open('DEMO.txt', 'w') as f:
-        make_mit = f.write(mit.format(DATE, FULLNAME))
-    return '*ok'
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-def make_mit():
-    mit = read_mit()
-    return mit.format(DATE, FULLNAME)
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-def required():
-    return 'License and copyright notice'
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+'''
 
-def permitted():
-    perm = {1: 'Commercial Use', 2: 'Distribution', 3: 'Modification', 4: 'Private Use', 5: 'Sublicensing'}
-    return perm
-
-def forbidden():
-    return 'Hold Liable'
-
+def return_mit():
+    text = mit_text().format(DATE, FULLNAME)
+    current_path = os.path.dirname(os.path.abspath(__file__))
+    os.system('touch LICENSE')
+    os.path.join(current_path, 'LICENSE')
+    with open('LICENSE', 'w') as f:
+        f.write(text)
+    return colored.blue('FILE CREATION COMPLETE')

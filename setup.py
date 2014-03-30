@@ -19,7 +19,7 @@ setup(
     packages=['getmit'],
     entry_points={
         'console_scripts': [
-            'getmit = getmit.cli:setup'
+            'getmit = getmit.core:return_mit'
             ]
         }
     )
