@@ -10,7 +10,7 @@ except ImportError:
 
 setup(
     name='getmit',
-    version='0.0.2',
+    version='0.0.3',
     description='CLI for making MIT license',
     url='https://github.com/edgarasg/getmit',
     author='Edgar Gavrik',
